@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProfileServlet", urlPatterns = {"/profile"})
+@WebServlet(name = "ProfileServlet", urlPatterns = {"/","/profile"})
 public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
