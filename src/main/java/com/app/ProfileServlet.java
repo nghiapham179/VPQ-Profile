@@ -20,8 +20,8 @@ public class ProfileServlet extends HttpServlet {
         // Tạo object Profile
         Profile me = new Profile(
                 "Võ Phương Quỳnh",
-                "Bác sĩ công nghệ",
-                "Yêu Java 21, clean code & tối ưu hiệu năng.",
+                "Nội thần kinh",
+                "Bệnh viện Đại học Y Dược TP.HCM.",
                 List.of(
                         new Link("Orcid", "https://orcid.org/0009-0007-2142-2818",
                                 "https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"),

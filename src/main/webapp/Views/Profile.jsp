@@ -10,10 +10,11 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Asset/Style.css">
 </head>
 <body>
+
 <div class="container">
     <div class="card">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/0?v=4" alt="avatar"/>
-        <h1>${profile.fullName}</h1>
+        <img class="avatar" src="${pageContext.request.contextPath}/image/quynh.png" alt="avatar"/>
+
         <h2>${profile.headline}</h2>
         <p class="bio">${profile.bio}</p>
 

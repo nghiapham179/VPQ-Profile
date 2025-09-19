@@ -14,16 +14,39 @@ html,body{
     height:100%;
 }
 
-body{
+body {
     font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     margin:0;
     color:var(--ink);
-    /* Nền học thuật: xanh nhạt – trắng – xám */
-    background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 48%, var(--bg3) 100%);
+
+    /* Ảnh nền */
+    background: url("../image/3.jpg") no-repeat center center fixed;
+    background-size: cover;
+
     display:flex;
     align-items:center;
     justify-content:center;
     padding:60px 24px;
+
+    /* Để overlay hoạt động */
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Overlay blur */
+body::before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);             /* mức độ mờ */
+    background: rgba(255,255,255,0.35);     /* lớp phủ sáng nhẹ */
+    z-index: 0;
+}
+
+/* Card và nội dung nằm trên overlay */
+.container {
+    position: relative;
+    z-index: 1;
 }
 
 /* ====== Layout ====== */
@@ -32,18 +55,20 @@ body{
     display:flex;
     justify-content:center;
 }
-
 .card{
-    max-width: 880px;             /* khung tổng to hơn */
+    max-width: 880px;
     width: 100%;
-    background: #fff;
-    padding: 72px 64px;           /* padding rộng, thoáng */
+    background: rgba(255,255,255,0.8); /* trắng trong suốt */
+    backdrop-filter: blur(10px);       /* hiệu ứng kính mờ */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 72px 64px;
     border-radius: 24px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(255,255,255,0.5);
     box-shadow: 0 20px 50px rgba(15,23,42,.15);
     text-align:center;
     transition: transform .30s ease, box-shadow .30s ease;
 }
+
 
 .card:hover{
     transform: translateY(-8px);
@@ -55,23 +80,24 @@ body{
     width: 168px;
     height: 168px;
     border-radius: 50%;
-    border: 4px solid #93c5fd;
-    box-shadow: 0 10px 26px rgba(0,0,0,.12);
+    border: 4px solid #3b82f6;     /* viền xanh dương đậm */
+    box-shadow: 0 10px 26px rgba(0,0,0,.25); /* đổ bóng rõ hơn */
     object-fit: cover;
     margin-bottom: 28px;
 }
+
 
 h1{
     margin: 0 0 12px;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #0f172a;
     letter-spacing: -.3px;
 }
 
 h2{
     margin: 0 0 26px;
-    color: var(--accent);
+    color: #0369a1;
     font-weight: 600;
     font-size: 1.35rem;
 }
@@ -87,12 +113,9 @@ h3{
 }
 
 .bio{
-    max-width: 700px;
-    margin: 0 auto 24px;
-    font-size: 1.15rem;
-    line-height: 1.75;
-    color: var(--muted);
-    opacity: .98;
+    color: #334155;
+    font-size: 1.1rem;
+    background: transparent; /* bỏ nền xám cũ */
 }
 
 /* ====== Links ====== */
