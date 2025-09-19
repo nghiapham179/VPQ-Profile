@@ -1,0 +1,101 @@
+body {
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #ffffff);
+    color: #1e293b;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    max-width: 700px;       /* to hơn */
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 48px;     /* padding rộng */
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(0, 123, 255, 0.15);
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 123, 255, 0.25);
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    border: 3px solid #bae6fd;
+    box-shadow: 0 6px 16px rgba(0,0,0,.1);
+    object-fit: cover;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0c4a6e;
+}
+h2 {
+    margin: 0 0 20px;
+    color: #0284c7;
+    font-weight: 500;
+}
+h3 {
+    margin-top: 32px;
+    font-size: 1.2rem;
+    color: #0369a1;
+}
+
+.bio {
+    opacity: .95;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #334155;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.links {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 26px;
+}
+
+.links li {
+    margin: 12px 0;
+}
+
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* khoảng cách icon với chữ */
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #e0f2fe;
+    color: #0369a1;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #bae6fd;
+    transition: all 0.25s ease;
+}
+
+.btn-link:hover {
+    background: #0284c7;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.link-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
