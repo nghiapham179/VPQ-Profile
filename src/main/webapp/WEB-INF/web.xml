@@ -5,19 +5,11 @@
                              https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
-    <!-- Servlet -->
-    <servlet>
-        <servlet-name>ProfileServlet</servlet-name>
-        <servlet-class>com.app.ProfileServlet</servlet-class>
-    </servlet>
+    <!-- Nếu bạn chưa khai báo servlet trong web.xml thì vẫn OK
+         vì bạn đã dùng @WebServlet("/profile") trong code -->
 
-    <servlet-mapping>
-        <servlet-name>ProfileServlet</servlet-name>
-        <url-pattern>/profile</url-pattern>
-    </servlet-mapping>
-
-    <!-- Welcome file -->
     <welcome-file-list>
-        <welcome-file>Views/Profile.jsp</welcome-file>
+        <!-- Trỏ mặc định vào đường dẫn servlet -->
+        <welcome-file>profile</welcome-file>
     </welcome-file-list>
 </web-app>
